@@ -3,6 +3,7 @@
 *.o
 *.elf
 *.log
+*.a
 build/
 build/*
 .vscode/*
