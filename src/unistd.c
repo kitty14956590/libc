@@ -40,3 +40,11 @@ long syscall(long number, ...) {
 	);
 	return __syscall_return__(ret);
 }
+
+ssize_t write(int fd, const void * buff, size_t count) {
+	return syscall(1, fd, buff, count);
+}
+
+int close(int fd) {
+	return syscall(3, fd);
+}

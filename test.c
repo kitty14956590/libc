@@ -1,13 +1,13 @@
 #include <stdio.h>
+#include <unistd.h>
 
 int main() {
-//	FILE * file;
-//	puts("Hello World!");
+	int file;
+	puts("Hello World!");
 
-/*
-	file = fopen("/tmp/file.txt", "w");
-	fwrite("hi\r\n", 4, 1, file);
-	fclose(file);
-*/
-	return 123;
+	puts("Writing \"hello\" to /tmp/file.txt");
+	file = open("/tmp/file.txt", O_WRONLY | O_CREAT, 0644);
+	write(file, "hello\r\n", 7);
+	close(file);
+	return file;
 }
