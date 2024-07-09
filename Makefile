@@ -2,7 +2,7 @@ BUILD_DIR := build
 
 CC := gcc
 S := gcc
-CCFLAGS := -O1 -march=native -fomit-frame-pointer -fallow-store-data-races -Wno-pointer-to-int-cast -I includes -nostdlib -g
+CCFLAGS := -O2 -march=native -fomit-frame-pointer -fallow-store-data-races -Wno-pointer-to-int-cast -I includes -nostdlib -g
 LD := ld
 MAKE := make
 AR := ar
